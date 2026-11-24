@@ -72,6 +72,10 @@ def run(http, S, old, today, only=None, pause=time.sleep):
         h = terms(http, src) if not err else None     # a dead host would cost minutes more
         o = old["sources"].get(i)
         changed = bool(h and o and o["terms_sha256"] and o["terms_sha256"] != h)
+        if changed:     # one odd response is not a new page: read again before raising an alert
+            pause(60)
+            h = terms(http, src) or h
+            changed = o["terms_sha256"] != h
         new[i] = health.step(o, not err, err, h, today)
         rows.append(dict(id=i, result="fail" if err else "ok", error=err, asset_id=c and c["asset_id"], verdict=c and c["gate"]["verdict"],
                          terms="not_checked" if not h else "changed" if changed else "ok", failures=new[i]["failures"]))

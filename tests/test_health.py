@@ -44,6 +44,15 @@ def test_smoke_run(monkeypatch):
     md, bad = smoke.report(rows); assert bad and "`boom / @someone 'x' # h`" in md and "verify_status: stale" in md
     assert smoke.report([dict(id="a", result="ok", error=None, terms="ok", failures=0)])[1] is False and smoke.report([dict(id="a", result="ok", error=None, terms="changed", failures=0)])[1] is True
 @need
+def test_smoke_rereads_changed_terms(monkeypatch):
+    monkeypatch.setattr(smoke, "probe", lambda h, s: dict(asset_id="x", gate=dict(verdict="PASS")))
+    old = dict(schema_version="1.0.0", generated_at="2026-11-01", sources=dict(nps=dict(week="2026-W44", before=0, failures=0, last_ok="2026-11-01", error=None, terms_sha256="a"*64)))
+    for seq, want, kept in ((["b", "a"], "ok", "a"), (["b", "b"], "changed", "b"), (["b", None], "changed", "b"), (["a"], "ok", "a")):
+        it, waits = iter(seq), []
+        monkeypatch.setattr(smoke, "terms", lambda h, s: (x := next(it)) and x * 64)
+        rows, new = smoke.run(None, load_sources(), old, D, "nps", pause=waits.append)
+        assert rows[0]["terms"] == want and new["sources"]["nps"]["terms_sha256"] == kept * 64 and waits == [60] * (len(seq) - 1)
+@need
 def test_smoke_terms_only_own_host():
     assert smoke.terms(None, dict(terms_url="https://other.org/t", hosts=["a.org"])) is None and smoke.terms(None, dict(hosts=["a.org"])) is None
 wf = sorted((R/".github/workflows").glob("*.yml"))
