@@ -1,0 +1,42 @@
+{
+  "responseHeader":{
+    "status":0,
+    "QTime":5,
+    "params":{
+      "q":"bison",
+      "defType":"edismax",
+      "fl":"Type,Title,Credit,Duration,Date_Taken,Image_URL,Sites,Abstract,PageURL",
+      "fq":["-Is_Sensitive_Video:\"true\"",
+        "Category:\"Multimedia\"",
+        "Type:\"Video\""],
+      "rows":"3",
+      "wt":"json"}},
+  "response":{"numFound":90,"start":0,"numFoundExact":true,"docs":[
+      {
+        "Type":["Video"],
+        "Title":"Bison",
+        "Abstract":"Distance learning video about bison.",
+        "PageURL":"/media/video/view.htm?id=BE356A61-09C9-40A4-BD32-7312A58379CA",
+        "Date_Taken":"2020-10-14T00:00:00Z",
+        "Sites":"Yellowstone National Park",
+        "Duration":"20:28",
+        "Credit":"NPS"},
+      {
+        "Type":["Video"],
+        "Title":"Museum Bison",
+        "Abstract":"A Look Inside Gateway Arch National Park\nRanger Carl gives insight into why the bison was so important to Native Americans of the Great Plains.",
+        "PageURL":"/media/video/view.htm?id=A165025E-06DB-43C7-B4C6-2B91D35CC903",
+        "Date_Taken":"2020-10-14T00:00:00Z",
+        "Sites":"Gateway Arch National Park",
+        "Duration":"3:55",
+        "Credit":"NPS/Sue Ford"},
+      {
+        "Type":["Video"],
+        "Title":"Bison herd",
+        "Abstract":"Location: Lamar Valley\nCopyright Info: Public domain\nFrame: 1920 x 1080 (30p)\nAudio: none",
+        "PageURL":"/media/video/view.htm?id=58216178-F013-4CD1-B876-12195E6079A5",
+        "Date_Taken":"2020-10-14T00:00:00Z",
+        "Sites":"Yellowstone National Park",
+        "Duration":"0:24",
+        "Credit":"NPS/Neal Herbert"}]
+  }}

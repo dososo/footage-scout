@@ -1,0 +1,39 @@
+{
+ "results": [
+  {
+   "id": "http://www.loc.gov/item/00694211/",
+   "title": "Freight train",
+   "contributor": [
+    "paper print collection (library of congress)",
+    "blechynden, frederick",
+    "white, james h. (james henry)",
+    "thomas a. edison, inc"
+   ],
+   "access_restricted": false,
+   "url": "https://www.loc.gov/item/00694211/"
+  },
+  {
+   "id": "http://www.loc.gov/item/98501114/",
+   "title": "Observation train following parade",
+   "contributor": [
+    "paper print collection (library of congress)",
+    "niver (kemp) collection (library of congress)",
+    "white, james h. (james henry)",
+    "thomas a. edison, inc"
+   ],
+   "access_restricted": false,
+   "url": "https://www.loc.gov/item/98501114/"
+  },
+  {
+   "id": "http://www.loc.gov/item/00694236/",
+   "title": "The little train robbery",
+   "contributor": [
+    "paper print collection (library of congress)",
+    "porter, edwin s.",
+    "thomas a. edison, inc"
+   ],
+   "access_restricted": false,
+   "url": "https://www.loc.gov/item/00694236/"
+  }
+ ]
+}

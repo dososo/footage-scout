@@ -1,0 +1,8 @@
+{
+  "name": "footage-scout",
+  "description": "footage-scout plugin",
+  "owner": { "name": "爆裂队长NEXT（BLCaptain）" },
+  "plugins": [
+    { "name": "footage-scout", "source": "./", "description": "Keyless, licence-gated video footage search" }
+  ]
+}

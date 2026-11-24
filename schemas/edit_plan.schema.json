@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://footage-scout.invalid/edit_plan.schema.json",
+  "title": "edit_plan",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "brief_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "clips": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "media": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "duration_s": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "width": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "height": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "fps": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "codec": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "duration_s",
+                  "width",
+                  "height"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "segment": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "in_s": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "out_s": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "parent_sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "in_s",
+                  "out_s",
+                  "parent_sha256"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "license_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rules": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "no_edit",
+                "no_ai_edit",
+                "disclose_ai_edit",
+                "credit",
+                "check_third_party"
+              ]
+            }
+          },
+          "credit": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "asset_id",
+          "path",
+          "sha256",
+          "media",
+          "segment",
+          "license_id",
+          "rules",
+          "credit"
+        ]
+      }
+    },
+    "left_out": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "asset_id",
+          "reason"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "project",
+    "brief_sha256",
+    "clips",
+    "left_out"
+  ]
+}

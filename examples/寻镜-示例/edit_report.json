@@ -1,0 +1,1 @@
+{"schema_version": "1.0.0", "brief_sha256": "00a4b929753dd37b49e0030e8ea0513ff32fb614b96b122ac7a6e29b7a729abb", "items": [{"asset_id": "nps:58216178-F013-4CD1-B876-12195E6079A5#t=2,6", "sha256": "f5dff44447764153bbb9d98db4837e205dd6b4f8f7f797678980bad3557b8a64", "changes": [{"kind": "crop", "detail": "16:9 to 9:16"}, {"kind": "speed", "detail": "50%"}]}]}

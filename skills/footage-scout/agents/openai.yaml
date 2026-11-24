@@ -1,0 +1,14 @@
+interface:
+  display_name: "寻镜 · 视频素材许可门禁"
+  short_description: "按镜头找可用的视频素材，先过许可门禁，再下载、截片、署名"
+  icon_small: "assets/icon.svg"
+  icon_large: "assets/icon.svg"
+  default_prompt: "Use $footage-scout to find footage for this script"
+policy:
+  allow_implicit_invocation: true
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "footage-scout"
+      description: "footage-scout local MCP server (fsc mcp)"
+      transport: "stdio"

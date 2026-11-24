@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "title": "Project title",
+  "use": "personal_noncommercial",
+  "ai": "none",
+  "orientation": "landscape",
+  "documentary": false,
+  "shots": [
+    {
+      "shot_id": "s1",
+      "description": "Rain falling on a city street at night",
+      "queries": ["rain city night", "rain street night", "rain on window close-up"],
+      "topics": ["general"],
+      "duration_s": 5
+    }
+  ]
+}

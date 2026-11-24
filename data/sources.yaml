@@ -1,0 +1,1784 @@
+schema_version: 1.0.0
+generated_at: '2026-11-24'
+sources:
+- id: nasa_images
+  tier: T1
+  status: active
+  topics:
+  - space_science
+  hosts:
+  - images-api.nasa.gov
+  - images-assets.nasa.gov
+  redirect_host_suffixes: []
+  license_model: public_domain_agency
+  license_id: NASA-media
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: third-party items marked; no endorsement; identifiable persons need permission
+    commercially
+  terms_url: https://www.nasa.gov/nasa-brand-center/images-and-media/
+- id: nasa_svs
+  tier: T1
+  status: degraded
+  topics:
+  - space_science
+  hosts:
+  - svs.gsfc.nasa.gov
+  redirect_host_suffixes: []
+  license_model: public_domain_agency
+  license_id: PD-unless-noted
+  attribution_required: 'no'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: terms read 2026-11-20; connection failed twice 2026-11-24; licensed music
+    is not PD
+  terms_url: https://svs.gsfc.nasa.gov/help/
+- id: ia
+  tier: T1
+  status: active
+  topics:
+  - history_archive
+  hosts:
+  - archive.org
+  redirect_host_suffixes:
+  - .us.archive.org
+  - .ca.archive.org
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: B
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-23'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: 'Prelinger items with an explicit CC licenseurl only, always third-party
+    WARN; terms dated 2014-12-31 read in a browser 2026-11-23: declared licence may
+    be used to the extent the declarer is trusted'
+  terms_url: https://archive.org/about/terms
+- id: ia_nasa
+  tier: T1
+  status: active
+  topics:
+  - space_science
+  hosts:
+  - archive.org
+  redirect_host_suffixes:
+  - .us.archive.org
+  - .ca.archive.org
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: B
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: same adapter as ia
+  terms_url: https://archive.org/about/terms
+- id: loc
+  tier: T1
+  status: active
+  topics:
+  - history_archive
+  hosts:
+  - www.loc.gov
+  - tile.loc.gov
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 1
+    min_interval_ms: 5000
+    ua_required: true
+  notes: 20 req/min, 1h block; use /film-and-videos/?fo=json because robots disallows
+    /search
+  terms_url: https://www.loc.gov/legal/
+- id: openbeelden
+  tier: T1
+  status: active
+  topics:
+  - history_archive
+  hosts:
+  - www.openbeelden.nl
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 1
+    min_interval_ms: 10000
+    ua_required: true
+  notes: all items CC or PD; robots crawl-delay 10; OAI unreachable once then Identify
+    ok 2026-11-24
+  terms_url: https://www.openbeelden.nl/api
+- id: commons
+  tier: T1
+  status: active
+  topics:
+  - general
+  - nature
+  - history_archive
+  hosts:
+  - commons.wikimedia.org
+  - upload.wikimedia.org
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 1
+    min_interval_ms: 1000
+    ua_required: true
+  notes: serial requests per API:Etiquette; documented API allowed
+  terms_url: https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia
+- id: netflix_open
+  tier: T1
+  status: active
+  topics:
+  - cinematic_test
+  hosts:
+  - s3.amazonaws.com
+  - opencontent.netflix.com
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: CC-BY-4.0
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: path-restricted to bucket download.opencontent.netflix.com
+  terms_url: https://opencontent.netflix.com/
+- id: peertube
+  tier: T1
+  status: active
+  topics:
+  - general
+  hosts:
+  - sepiasearch.org
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: C
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: instance hosts are resolved at fetch time and validated against the item
+    URL
+  terms_url: https://framasoft.org/en/legals/
+- id: mixkit
+  tier: T3
+  status: active
+  topics:
+  - general
+  - motion_background
+  hosts:
+  - mixkit.co
+  - assets.mixkit.co
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: Mixkit-Stock-Video-Free
+  attribution_required: 'no'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: 'link hand-off only, no automated access: terms s.9 forbid access in any
+    way not expressly permitted and bots for mass download'
+  terms_url: https://mixkit.co/terms/
+- id: coverr
+  tier: T3
+  status: active
+  topics:
+  - general
+  hosts:
+  - coverr.co
+  - cdn.coverr.co
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: Coverr
+  attribution_required: 'no'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: no_training
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: 'link hand-off only: website terms 3(vii) forbid robots and any automated
+    access; API/MCP needs an account; skip Premium; AI items flagged'
+  terms_url: https://coverr.co/license
+- id: dareful
+  tier: T2
+  status: active
+  topics:
+  - nature
+  - general
+  hosts:
+  - dareful.com
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: CC-BY-4.0
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: B
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: licence read from site footer; linked to CC BY 4.0; search and link only
+    (files are streamed via Mux, no direct file)
+  terms_url: https://dareful.com/
+- id: vidsplay
+  tier: T2
+  status: active
+  topics:
+  - general
+  hosts:
+  - www.vidsplay.com
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: Vidsplay
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: no_training
+  source_trust: B
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: visible credit link; no as-is redistribution; robots Content-Signal ai-train=no
+  terms_url: https://www.vidsplay.com/terms/
+- id: isorepublic
+  tier: T2
+  status: active
+  topics:
+  - general
+  hosts:
+  - isorepublic.com
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: CC0-1.0
+  attribution_required: 'no'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: B
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+  terms_url: https://isorepublic.com/license/
+- id: freenaturestock
+  tier: T2
+  status: active
+  topics:
+  - nature
+  hosts:
+  - freenaturestock.com
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: CC0-1.0
+  attribution_required: 'no'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: B
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: robots Content-Signal ai-train=no
+  terms_url: https://freenaturestock.com/license/
+- id: beeple
+  tier: T2
+  status: hold
+  topics:
+  - motion_background
+  hosts:
+  - www.beeple-crap.com
+  - beeple-crap.com
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: CC-unspecified
+  attribution_required: unknown
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: B
+  gate_default: hold
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: CC version not stated
+  terms_url: https://www.beeple-crap.com/vjloops
+- id: cutestock
+  tier: T2
+  status: hold
+  topics:
+  - general
+  hosts:
+  - cutestockfootage.com
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: B
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: freestockvideo
+  tier: T2
+  status: hold
+  topics:
+  - general
+  hosts:
+  - free-stock.video
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: B
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: beachfront
+  tier: T2
+  status: hold
+  topics:
+  - general
+  hosts:
+  - www.beachfrontbroll.com
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: B
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: nasa_eol
+  tier: T2
+  status: active
+  topics:
+  - space_science
+  - earth_science
+  hosts:
+  - eol.jsc.nasa.gov
+  redirect_host_suffixes: []
+  license_model: public_domain_agency
+  license_id: NASA-media
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: credit Earth Science and Remote Sensing Unit, NASA JSC
+  terms_url: https://eol.jsc.nasa.gov/FAQ/
+- id: esawebb
+  tier: T2
+  status: active
+  topics:
+  - space_science
+  hosts:
+  - esawebb.org
+  - cdn.esawebb.org
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: CC-BY-4.0
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: credit not hidden; music excluded
+  terms_url: https://esawebb.org/copyright/
+- id: esahubble
+  tier: T2
+  status: active
+  topics:
+  - space_science
+  hosts:
+  - esahubble.org
+  - cdn.esahubble.org
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: CC-BY-4.0
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: credit burned in or visible as end credit; music excluded
+  terms_url: https://esahubble.org/copyright/
+- id: eso
+  tier: T2
+  status: active
+  topics:
+  - space_science
+  hosts:
+  - www.eso.org
+  - cdn.eso.org
+  - cdn2.eso.org
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: CC-BY-4.0
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: disclose_ai_modification
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: must state AI modification
+  terms_url: https://www.eso.org/public/outreach/copyright/
+- id: noirlab
+  tier: T2
+  status: active
+  topics:
+  - space_science
+  hosts:
+  - noirlab.edu
+  - storage.noirlab.edu
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: CC-BY-4.0
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+  terms_url: https://noirlab.edu/public/copyright/
+- id: esa
+  tier: T2
+  status: hold
+  topics:
+  - space_science
+  hosts:
+  - www.esa.int
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: ESA-website-terms
+  attribution_required: 'yes'
+  commercial: 'no'
+  derivatives: 'no'
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: site terms non-commercial/no derivatives; separate image-video terms page
+    not found
+  terms_url: https://www.esa.int/terms-and-conditions
+- id: noaa
+  tier: T2
+  status: hold
+  topics:
+  - earth_science
+  hosts:
+  - www.noaa.gov
+  redirect_host_suffixes: []
+  license_model: public_domain_agency
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: official page returned 403
+- id: usgs
+  tier: T2
+  status: active
+  topics:
+  - earth_science
+  - nature
+  hosts:
+  - www.usgs.gov
+  - usgs-ocapsv2-public-input-media.s3.us-west-2.amazonaws.com
+  - usgs-ocapsv2-public-output-media.s3.us-west-2.amazonaws.com
+  - d9-wret.s3.us-west-2.amazonaws.com
+  redirect_host_suffixes: []
+  license_model: public_domain_agency
+  license_id: PD-unless-noted
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+  terms_url: https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits
+- id: usfws
+  tier: T2
+  status: hold
+  topics:
+  - wildlife
+  hosts:
+  - www.fws.gov
+  redirect_host_suffixes: []
+  license_model: public_domain_agency
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: fetched policy index has no licence text
+- id: nps
+  tier: T2
+  status: active
+  topics:
+  - nature
+  - wildlife
+  hosts:
+  - www.nps.gov
+  redirect_host_suffixes: []
+  license_model: public_domain_agency
+  license_id: PD-unless-noted
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: passes only when the item itself says Public domain and credits NPS; NPS-credited
+    without that statement warns; other credits hold
+  terms_url: https://www.nps.gov/aboutus/disclaimer.htm
+- id: footagearchive
+  tier: T2
+  status: hold
+  topics:
+  - history_archive
+  hosts:
+  - www.freestockfootagearchive.com
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: B
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: pdmovie
+  tier: T2
+  status: hold
+  topics:
+  - history_archive
+  hosts:
+  - publicdomainmovie.net
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: B
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: footagefarm
+  tier: T2
+  status: hold
+  topics:
+  - history_archive
+  hosts:
+  - www.footagefarm.com
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: B
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: eu_av
+  tier: T2
+  status: active
+  topics:
+  - government
+  hosts:
+  - audiovisual.ec.europa.eu
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: CC-BY-4.0
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: no EU-purpose limit found; check each file; do not distort meaning; music
+    and persons excluded
+  terms_url: https://audiovisual.ec.europa.eu/en/conditions-of-use
+- id: whitehouse
+  tier: T2
+  status: hold
+  topics:
+  - government
+  hosts:
+  - www.whitehouse.gov
+  redirect_host_suffixes: []
+  license_model: public_domain_agency
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: blender_studio
+  tier: T2
+  status: active
+  topics:
+  - animation
+  hosts:
+  - studio.blender.org
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: CC-BY-4.0
+  attribution_required: 'yes'
+  commercial: 'yes'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: unless notified otherwise; robots Content-Signal ai-train=no; provenance=animation
+  terms_url: https://studio.blender.org/terms-and-conditions/
+- id: cinestudy
+  tier: T2
+  status: hold
+  topics:
+  - cinematic_test
+  hosts:
+  - cinestudy.org
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: B
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: tcmb
+  tier: T2
+  status: hold
+  topics:
+  - chinese_asia
+  hosts:
+  - memory.culture.tw
+  - tcmb.culture.tw
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: official page timed out
+  terms_url: https://tcmb.culture.tw/zh-tw/FAQ/170
+- id: pexels
+  tier: T3
+  status: active
+  topics:
+  - general
+  hosts:
+  - www.pexels.com
+  - videos.pexels.com
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: 403; user reads terms in browser
+  terms_url: https://www.pexels.com/license/
+- id: pixabay
+  tier: T3
+  status: active
+  topics:
+  - general
+  hosts:
+  - pixabay.com
+  - cdn.pixabay.com
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: '403'
+  terms_url: https://pixabay.com/service/license-summary/
+- id: videezy
+  tier: T3
+  status: active
+  topics:
+  - general
+  hosts:
+  - www.videezy.com
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: B
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: '403'
+  terms_url: https://www.videezy.com/licensing
+- id: nasa_jpl
+  tier: T3
+  status: active
+  topics:
+  - space_science
+  hosts:
+  - www.jpl.nasa.gov
+  redirect_host_suffixes: []
+  license_model: public_domain_agency
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: '403'
+- id: britishcouncil
+  tier: T3
+  status: active
+  topics:
+  - history_archive
+  hosts:
+  - film.britishcouncil.org
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: '403'
+- id: pond5_pd
+  tier: T3
+  status: active
+  topics:
+  - history_archive
+  hosts:
+  - www.pond5.com
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: B
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: ep_multimedia
+  tier: T3
+  status: active
+  topics:
+  - government
+  hosts:
+  - multimedia.europarl.europa.eu
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: 403; purpose limit reported by search summary only; R9 applies until read
+- id: nih
+  tier: T3
+  status: active
+  topics:
+  - life_science
+  hosts:
+  - www.nih.gov
+  redirect_host_suffixes: []
+  license_model: public_domain_agency
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: fema
+  tier: T3
+  status: active
+  topics:
+  - government
+  hosts:
+  - www.fema.gov
+  redirect_host_suffixes: []
+  license_model: public_domain_agency
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: dvids
+  tier: T3
+  status: active
+  topics:
+  - government
+  hosts:
+  - www.dvidshub.net
+  redirect_host_suffixes: []
+  license_model: public_domain_agency
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: vimeo_cc
+  tier: T3
+  status: active
+  topics:
+  - general
+  hosts:
+  - vimeo.com
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: C
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: tfai
+  tier: T3
+  status: active
+  topics:
+  - chinese_asia
+  hosts:
+  - www.tfai.org.tw
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: '403'
+- id: nara
+  tier: T3
+  status: active
+  topics:
+  - history_archive
+  hosts:
+  - catalog.archives.gov
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: 'moved from T2: robots is Disallow / for all agents'
+- id: flickr_cc
+  tier: T3
+  status: active
+  topics:
+  - general
+  hosts:
+  - www.flickr.com
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: C
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: 'moved from T2: robots is Disallow / for generic agents'
+  terms_url: https://www.flickr.com/creativecommons/
+- id: usda_flickr
+  tier: T3
+  status: active
+  topics:
+  - government
+  hosts:
+  - www.flickr.com
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: moved from T2 with flickr_cc
+- id: gongu
+  tier: T3
+  status: active
+  topics:
+  - chinese_asia
+  hosts:
+  - gongu.copyright.or.kr
+  - www.kogl.or.kr
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: KOGL
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: 'moved from T2: robots disallows download endpoints; KOGL types 0-4 and AI;
+    AI-type conditions not resolved'
+  terms_url: https://www.kogl.or.kr/info/license.do
+- id: cil
+  tier: T4
+  status: active
+  topics:
+  - life_science
+  hosts:
+  - www.cellimagelibrary.org
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: 'moved from T2: robots has conflicting * groups, one Disallow /'
+  terms_url: https://www.cellimagelibrary.org/pages/license
+- id: xiph
+  tier: T4
+  status: active
+  topics:
+  - cinematic_test
+  hosts:
+  - media.xiph.org
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: B
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: 'moved from T2: robots disallows media files'
+  terms_url: https://media.xiph.org/video/derf/
+- id: schmidt
+  tier: T4
+  status: active
+  topics:
+  - ocean
+  hosts:
+  - schmidtocean.org
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: CC-BY-NC-SA-4.0
+  attribution_required: 'yes'
+  commercial: 'no'
+  derivatives: 'yes'
+  ai_use: unknown
+  source_trust: A
+  gate_default: per_rules
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: request form; lobbying use forbidden per search summary
+  terms_url: https://schmidtocean.org/footage-requests-and-consent/
+- id: actionvfx
+  tier: T4
+  status: active
+  topics:
+  - vfx
+  hosts:
+  - www.actionvfx.com
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: B
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: smithsonian
+  tier: T4
+  status: active
+  topics:
+  - history_archive
+  hosts:
+  - www.si.edu
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: europeana
+  tier: T4
+  status: active
+  topics:
+  - history_archive
+  hosts:
+  - www.europeana.eu
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: dpla
+  tier: T4
+  status: active
+  topics:
+  - history_archive
+  hosts:
+  - dp.la
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: trove
+  tier: T4
+  status: active
+  topics:
+  - history_archive
+  hosts:
+  - trove.nla.gov.au
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: digitalnz
+  tier: T4
+  status: active
+  topics:
+  - history_archive
+  hosts:
+  - digitalnz.org
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: A
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: youtube_cc
+  tier: T4
+  status: active
+  topics:
+  - general
+  hosts:
+  - www.youtube.com
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: C
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: aigei
+  tier: T4
+  status: active
+  topics:
+  - chinese_asia
+  hosts:
+  - www.aigei.com
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: per_item
+  attribution_required: per_item
+  commercial: per_item
+  derivatives: per_item
+  ai_use: per_item
+  source_trust: C
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: vjshi
+  tier: T4
+  status: active
+  topics:
+  - chinese_asia
+  hosts:
+  - www.vjshi.com
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: C
+  gate_default: hold
+  verify_status: probed
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: ''
+- id: magnific
+  tier: null
+  status: blocked
+  topics:
+  - general
+  hosts: []
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: C
+  gate_default: block
+  verify_status: user_supplied
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: official licence page not read by this project; excluded until it is
+- id: vecteezy
+  tier: null
+  status: blocked
+  topics:
+  - general
+  hosts: []
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: C
+  gate_default: block
+  verify_status: user_supplied
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: official licence page not read by this project; excluded until it is
+- id: productioncrate
+  tier: null
+  status: blocked
+  topics:
+  - vfx
+  hosts: []
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: C
+  gate_default: block
+  verify_status: user_supplied
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: official licence page not read by this project; excluded until it is
+- id: motionplaces
+  tier: null
+  status: blocked
+  topics:
+  - general
+  hosts: []
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: C
+  gate_default: block
+  verify_status: user_supplied
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: official licence page not read by this project; excluded until it is
+- id: chaodian
+  tier: null
+  status: blocked
+  topics:
+  - chinese_asia
+  hosts: []
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: unknown
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: C
+  gate_default: block
+  verify_status: user_supplied
+  verified_at: '2026-11-20'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: official licence page not read by this project; excluded until it is
+- id: jaxa
+  tier: null
+  status: excluded
+  topics:
+  - space_science
+  hosts:
+  - jda.jaxa.jp
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: JAXA
+  attribution_required: 'yes'
+  commercial: 'no'
+  derivatives: 'no'
+  ai_use: unknown
+  source_trust: A
+  gate_default: block
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: no modification, no commercial without permission; Digital Archives own copyright
+    page not readable
+  terms_url: https://global.jaxa.jp/policy.html
+- id: eumetsat
+  tier: null
+  status: excluded
+  topics:
+  - earth_science
+  hosts:
+  - www.eumetsat.int
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: EUMETSAT-website
+  attribution_required: 'yes'
+  commercial: 'no'
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: block
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: website content personal non-commercial; Data Policy covers data not media
+  terms_url: https://www.eumetsat.int/about-us/terms-use
+- id: nautilus
+  tier: null
+  status: excluded
+  topics:
+  - ocean
+  hosts:
+  - nautiluslive.org
+  redirect_host_suffixes: []
+  license_model: per_item
+  license_id: all-rights-reserved
+  attribution_required: unknown
+  commercial: unknown
+  derivatives: unknown
+  ai_use: unknown
+  source_trust: A
+  gate_default: block
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: licensed on request only
+  terms_url: https://nautiluslive.org/pressroom
+- id: un_av
+  tier: null
+  status: excluded
+  topics:
+  - government
+  hosts:
+  - media.un.org
+  redirect_host_suffixes: []
+  license_model: site_license
+  license_id: UN-licence-agreement
+  attribution_required: 'yes'
+  commercial: unknown
+  derivatives: 'no'
+  ai_use: unknown
+  source_trust: A
+  gate_default: block
+  verify_status: official_read
+  verified_at: '2026-11-24'
+  politeness:
+    max_concurrency: 2
+    min_interval_ms: 1000
+    ua_required: true
+  notes: signed agreement and fees; files cannot be altered
+  terms_url: https://media.un.org/avlibrary/en/guidelines

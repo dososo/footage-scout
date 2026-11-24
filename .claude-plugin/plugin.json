@@ -1,0 +1,8 @@
+{
+  "name": "footage-scout",
+  "version": "0.5.0",
+  "description": "Find, check, download and credit licence-cleared video footage without accounts or API keys.",
+  "author": { "name": "爆裂队长NEXT（BLCaptain）" },
+  "license": "Apache-2.0",
+  "keywords": ["footage", "b-roll", "video", "licence"]
+}

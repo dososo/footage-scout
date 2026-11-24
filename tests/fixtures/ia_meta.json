@@ -1,0 +1,38 @@
+{
+ "metadata": {
+  "identifier": "us_news_review_issue_5",
+  "title": "U.S. News Review: Issue 5",
+  "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+  "mediatype": "movies",
+  "collection": "prelinger"
+ },
+ "files": [
+  {
+   "name": "us_news_review_issue_5.mp4",
+   "format": "h.264",
+   "size": "97286045",
+   "length": "934.18",
+   "width": "640",
+   "height": "480",
+   "source": "derivative"
+  },
+  {
+   "name": "us_news_review_issue_5.ogv",
+   "format": "Ogg Video",
+   "size": "66028852",
+   "length": "934.13",
+   "width": "400",
+   "height": "304",
+   "source": "derivative"
+  },
+  {
+   "name": "us_news_review_issue_5_512kb.mp4",
+   "format": "512Kb MPEG4",
+   "size": "67897809",
+   "length": "934.13",
+   "width": "320",
+   "height": "240",
+   "source": "derivative"
+  }
+ ]
+}

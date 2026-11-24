@@ -1,0 +1,77 @@
+{
+ "item": {
+  "id": "http://www.loc.gov/item/00694211/",
+  "title": "Freight train",
+  "contributor_names": [
+   "White, James H. (James Henry), production",
+   "Blechynden, Frederick, camera",
+   "Thomas A. Edison, Inc",
+   "Paper Print Collection (Library of Congress)"
+  ],
+  "rights": [
+   "<p>The Library of Congress is not aware of any U.S. copyright or other restrictions in the vast majority of motion pictures in these collections. Absent any such restrictions, these materials are free to use and reuse.</p>\r\n<p>In rare cases, copyrighted motion pictures are made available by special permission to the Library and may be used only for educational purposes. For example, the Gershwin home movies fall within this category. Rights assessment is your responsibility. No registration information exists for some titles, and reproduction of some titles may be restricted by privacy rights, publicity rights, licensing and trademarks. Additionally, some works may still be protected by copyright in the United States or some foreign countries. The written permission of the copyright owners in materials not in the public domain is required for distribution, reproduction, or other use of protected items beyond that allowed by fair use or other statutory exemptions.</p>\r\n<p>Whenever possible, we provide information that we have about copyright owners and related matters in the catalog records, finding aids and other texts that accompany collections. You should consult the catalog information that accompanies each item for specific information. This catalog data provides the details known to the Library of Congress regarding the corresponding item and may assist you in making independent assessments of the legal status of these items for their desired uses. You should also consult restrictions associated with donations to the Library.</p>\r\n<p>Credit Line: Library of Congress, Motion Picture, Broadcasting, and Recorded Sound Division.</p>\r\n<p>More about <a href=\"/legal/\">Copyright and other Restrictions</a>.</p>\r\n<p>For guidance about compiling full citations consult <a href=\"https://www.loc.gov/teachers/usingprimarysources/citing.html\">Citing Primary Sources</a>.</p>"
+  ],
+  "access_restricted": false
+ },
+ "resources": [
+  {
+   "files": [
+    [
+     {
+      "aspectRatio": "16:9",
+      "autoPlay": false,
+      "canDownload": true,
+      "ccUrl": null,
+      "detailUrl": "https://www.loc.gov/item/00694211/",
+      "download": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/00047124/00047124.mp4",
+      "mediaObjectId": "10E68EB0FACCCCC6E0635D0C938CDE79",
+      "mediaType": "V",
+      "metadata": [
+       "Freight Train",
+       "United States : Edison Manufacturing Co., 1898."
+      ],
+      "mimetype": "application/x-video",
+      "poster": "//tile.loc.gov/storage-services/service/mbrs/ntscrm/00047124/00047124.jpg",
+      "shortName": "Freight Train"
+     },
+     {
+      "height": null,
+      "levels": 1,
+      "mimetype": "video/mp4",
+      "size": 60734598,
+      "url": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/00047124/00047124.mp4",
+      "width": null
+     },
+     {
+      "mimetype": "application/json",
+      "title": "Freight Train"
+     },
+     {
+      "height": 375,
+      "levels": 1,
+      "mimetype": "image/gif",
+      "size": 106606,
+      "url": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/00047124/00047124.gif",
+      "width": 500
+     },
+     {
+      "height": 1080,
+      "levels": 1,
+      "mimetype": "image/jpeg",
+      "size": 54038,
+      "url": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/00047124/00047124.jpg",
+      "width": 1440
+     },
+     {
+      "height": null,
+      "levels": 1,
+      "mimetype": "video/quicktime",
+      "size": 131335081,
+      "url": "https://tile.loc.gov/storage-services/service/mbrs/ntscrm/00047124/00047124.mov",
+      "width": null
+     }
+    ]
+   ]
+  }
+ ]
+}

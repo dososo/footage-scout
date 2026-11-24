@@ -1,0 +1,20 @@
+{"query": "帮我给这段文案找几条空镜", "should_trigger": true}
+{"query": "找火箭发射的视频素材,商用", "should_trigger": true}
+{"query": "有没有五十年代美国厨房的老影像", "should_trigger": true}
+{"query": "这条 Pexels 素材能不能用在广告里", "should_trigger": true}
+{"query": "把我下载的素材登记一下", "should_trigger": true}
+{"query": "给这个项目生成素材署名", "should_trigger": true}
+{"query": "Find B-roll of ocean waves I can use without an account", "should_trigger": true}
+{"query": "check the licence of this archive clip", "should_trigger": true}
+{"query": "我要做个科普短片,需要星云画面", "should_trigger": true}
+{"query": "从这部长纪录片里挑五秒牛群过河的镜头", "should_trigger": true}
+{"query": "下载这个 B 站视频", "should_trigger": false}
+{"query": "用 AI 生成一段海浪视频", "should_trigger": false}
+{"query": "帮我把这两段视频剪到一起", "should_trigger": false}
+{"query": "给视频加字幕", "should_trigger": false}
+{"query": "找一张猫的图片", "should_trigger": false}
+{"query": "找一首无版权背景音乐", "should_trigger": false}
+{"query": "把这个 YouTube 链接存成 mp4", "should_trigger": false}
+{"query": "给视频调色", "should_trigger": false}
+{"query": "写一篇讲黑洞的文章", "should_trigger": false}
+{"query": "make a logo animation", "should_trigger": false}

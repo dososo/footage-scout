@@ -1,0 +1,293 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://footage-scout.invalid/manifest.schema.json",
+  "title": "manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "brief_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "source_page": {
+            "type": "string",
+            "pattern": "^https?://"
+          },
+          "download_host": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tasl": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "author": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source": {
+                "type": "string",
+                "pattern": "^https?://"
+              },
+              "license": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "title",
+              "author",
+              "source",
+              "license"
+            ]
+          },
+          "provenance": {
+            "enum": [
+              "camera",
+              "ai_generated",
+              "animation",
+              "unknown"
+            ]
+          },
+          "license": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "license_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "attribution_required": {
+                "enum": [
+                  "yes",
+                  "no",
+                  "unknown",
+                  "per_item"
+                ]
+              },
+              "derivatives": {
+                "enum": [
+                  "yes",
+                  "no",
+                  "unknown",
+                  "per_item"
+                ]
+              },
+              "commercial": {
+                "enum": [
+                  "yes",
+                  "no",
+                  "unknown",
+                  "per_item"
+                ]
+              },
+              "ai_use": {
+                "enum": [
+                  "allowed",
+                  "no_training",
+                  "no_generative_processing",
+                  "disclose_ai_modification",
+                  "unknown",
+                  "per_item"
+                ]
+              },
+              "third_party_rights_flag": {
+                "type": "boolean"
+              },
+              "purpose_restriction": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "terms_url": {
+                "type": "string",
+                "pattern": "^https?://"
+              },
+              "terms_snapshot_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "license_id",
+              "attribution_required",
+              "derivatives",
+              "commercial",
+              "ai_use",
+              "third_party_rights_flag",
+              "purpose_restriction",
+              "terms_snapshot_sha256"
+            ]
+          },
+          "gate": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "verdict": {
+                "enum": [
+                  "PASS",
+                  "WARN",
+                  "HOLD",
+                  "BLOCK"
+                ]
+              },
+              "rules": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^R[1-9]$"
+                }
+              },
+              "artifact_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "verdict",
+              "rules",
+              "artifact_sha256"
+            ]
+          },
+          "media": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "duration_s": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "width": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "height": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "fps": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "codec": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "duration_s",
+                  "width",
+                  "height"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "segment": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "in_s": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "out_s": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "parent_sha256": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                },
+                "required": [
+                  "in_s",
+                  "out_s",
+                  "parent_sha256"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "downloaded_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "modifications": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "asset_id",
+          "source_id",
+          "path",
+          "sha256",
+          "source_page",
+          "download_host",
+          "tasl",
+          "provenance",
+          "license",
+          "gate",
+          "media",
+          "segment",
+          "downloaded_at",
+          "modifications"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "project",
+    "brief_sha256",
+    "assets"
+  ]
+}

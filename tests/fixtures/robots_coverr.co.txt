@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: *?q=*
+
+Sitemap: https://coverr.co/sitemap.xml

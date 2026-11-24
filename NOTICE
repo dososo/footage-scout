@@ -1,0 +1,11 @@
+寻镜 · footage-scout
+版权所有 2026 爆裂队长NEXT（BLCaptain）
+
+核心库、命令行、MCP 服务、技能、数据表与 schema 采用 Apache-2.0（见 LICENSE）。
+说明文档（README 中英文、docs/、CHANGELOG）采用 CC BY 4.0（见 LICENSE-docs）。
+
+docs/media/ 里的画面取自美国国家公园管理局「Bison herd」（NPS/Neal Herbert），来源页写明 Public domain；图中文字与版式由本项目制作。
+tests/fixtures/ 是各来源公开响应裁剪后的最小片段，只用于测试解析，权利归各来源。
+本项目不分发任何视频素材、模型权重、第三方字体文件或第三方源码。第三方出处见 docs/第三方说明.md。
+
+门禁结论不是法律意见。

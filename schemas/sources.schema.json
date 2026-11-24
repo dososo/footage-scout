@@ -1,0 +1,273 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://footage-scout.invalid/sources.schema.json",
+  "title": "sources",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "generated_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$"
+          },
+          "tier": {
+            "enum": [
+              "T1",
+              "T2",
+              "T3",
+              "T4",
+              null
+            ]
+          },
+          "status": {
+            "enum": [
+              "active",
+              "hold",
+              "degraded",
+              "retired",
+              "blocked",
+              "excluded"
+            ]
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "hosts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9.-]+\\.[a-z]+$"
+            }
+          },
+          "redirect_host_suffixes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^\\.[a-z0-9.-]+\\.[a-z]+$"
+            }
+          },
+          "license_model": {
+            "enum": [
+              "per_item",
+              "site_license",
+              "public_domain_agency"
+            ]
+          },
+          "license_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "attribution_required": {
+            "enum": [
+              "yes",
+              "no",
+              "unknown",
+              "per_item"
+            ]
+          },
+          "commercial": {
+            "enum": [
+              "yes",
+              "no",
+              "unknown",
+              "per_item"
+            ]
+          },
+          "derivatives": {
+            "enum": [
+              "yes",
+              "no",
+              "unknown",
+              "per_item"
+            ]
+          },
+          "ai_use": {
+            "enum": [
+              "allowed",
+              "no_training",
+              "no_generative_processing",
+              "disclose_ai_modification",
+              "unknown",
+              "per_item"
+            ]
+          },
+          "source_trust": {
+            "enum": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "gate_default": {
+            "enum": [
+              "per_rules",
+              "hold",
+              "block"
+            ]
+          },
+          "verify_status": {
+            "enum": [
+              "probed",
+              "official_read",
+              "user_supplied",
+              "stale"
+            ]
+          },
+          "verified_at": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d\\d-\\d\\d$"
+          },
+          "terms_url": {
+            "type": "string",
+            "pattern": "^https?://"
+          },
+          "politeness": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "max_concurrency": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 2
+              },
+              "min_interval_ms": {
+                "type": "integer",
+                "minimum": 500
+              },
+              "ua_required": {
+                "const": true
+              }
+            },
+            "required": [
+              "max_concurrency",
+              "min_interval_ms",
+              "ua_required"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "tier",
+          "status",
+          "topics",
+          "hosts",
+          "redirect_host_suffixes",
+          "license_model",
+          "license_id",
+          "attribution_required",
+          "commercial",
+          "derivatives",
+          "ai_use",
+          "source_trust",
+          "gate_default",
+          "verify_status",
+          "verified_at",
+          "politeness",
+          "notes"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "verify_status": {
+                  "const": "official_read"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "terms_url"
+              ]
+            },
+            "else": {
+              "properties": {
+                "gate_default": {
+                  "enum": [
+                    "hold",
+                    "block"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "enum": [
+                    "active",
+                    "hold",
+                    "degraded"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "tier": {
+                  "enum": [
+                    "T1",
+                    "T2",
+                    "T3",
+                    "T4"
+                  ]
+                },
+                "hosts": {
+                  "minItems": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "enum": [
+                    "blocked",
+                    "excluded"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "gate_default": {
+                  "const": "block"
+                },
+                "notes": {
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "generated_at",
+    "sources"
+  ]
+}

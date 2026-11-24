@@ -1,0 +1,11 @@
+.venv/
+dist/
+handoff/
+smoke-out/
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.egg-info/
+internal/
+out/
+footage/

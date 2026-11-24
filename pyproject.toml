@@ -1,0 +1,40 @@
+[project]
+name = "footage-scout"
+version = "0.5.0"
+description = "Keyless, licence-gated video footage search and download"
+requires-python = ">=3.11"
+readme = "README.md"
+authors = [{ name = "爆裂队长NEXT（BLCaptain）" }]
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+dependencies = ["httpx>=0.27,<1", "PyYAML>=6,<7", "jsonschema>=4.21,<5"]
+[project.scripts]
+fsc = "footage_scout.cli:main"
+footage-scout = "footage_scout.cli:main"
+
+[project.urls]
+Repository = "https://github.com/dososo/footage-scout"
+
+[project.optional-dependencies]
+mcp = [
+    "mcp>=2.3,<3",
+]
+vision = [
+    "open_clip_torch>=4.2,<5",
+    "torch>=2.6",
+    "pillow>=11",
+]
+[dependency-groups]
+dev = ["pytest>=8"]
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[tool.hatch.build.targets.wheel]
+packages = ["src/footage_scout"]
+[tool.hatch.build.targets.wheel.force-include]
+"data" = "footage_scout/data"
+"schemas" = "footage_scout/schemas"
+[tool.hatch.build.targets.sdist]
+include = ["src", "data", "schemas", "tests", "scripts", ".github", "skills", "evals", "examples", "docs", "LICENSE-docs", ".claude-plugin", ".agents", "plugin.json", "mcp.json", ".mcp.json", "README.md", "README.en.md", "CHANGELOG.md", "NOTICE", "LICENSE", "pyproject.toml"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]

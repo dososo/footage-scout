@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "project": "bison",
+  "brief_sha256": "00a4b929753dd37b49e0030e8ea0513ff32fb614b96b122ac7a6e29b7a729abb",
+  "assets": [
+    {
+      "asset_id": "nps:58216178-F013-4CD1-B876-12195E6079A5",
+      "source_id": "nps",
+      "path": "media/nps_1e81fc7d549c7b41.mp4",
+      "sha256": "d429dcbf9f90af2cdc18f2fcfaba7bcc5f12c96f73943ee358706f10b60946dc",
+      "source_page": "https://www.nps.gov/media/video/view.htm?id=58216178-F013-4CD1-B876-12195E6079A5",
+      "download_host": "www.nps.gov",
+      "tasl": {
+        "title": "Bison herd",
+        "author": "NPS/Neal Herbert",
+        "source": "https://www.nps.gov/media/video/view.htm?id=58216178-F013-4CD1-B876-12195E6079A5",
+        "license": "PD-unless-noted (https://www.nps.gov/aboutus/disclaimer.htm)"
+      },
+      "provenance": "unknown",
+      "license": {
+        "license_id": "PD-unless-noted",
+        "attribution_required": "yes",
+        "derivatives": "yes",
+        "commercial": "yes",
+        "ai_use": "unknown",
+        "third_party_rights_flag": false,
+        "purpose_restriction": null,
+        "terms_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+        "terms_snapshot_sha256": "33116c675b05818d68e62e3de66bff099e783a1d4e1b4ebd04c131c4800d35fa"
+      },
+      "gate": {
+        "verdict": "PASS",
+        "rules": [],
+        "artifact_sha256": "d429dcbf9f90af2cdc18f2fcfaba7bcc5f12c96f73943ee358706f10b60946dc"
+      },
+      "media": {
+        "duration_s": 24.533333,
+        "width": 1280,
+        "height": 720,
+        "codec": "h264",
+        "fps": 29.97
+      },
+      "segment": null,
+      "downloaded_at": "2026-11-24T09:20:56Z",
+      "modifications": []
+    },
+    {
+      "asset_id": "nps:58216178-F013-4CD1-B876-12195E6079A5#t=2,6",
+      "source_id": "nps",
+      "path": "clips/nps_8a42d7ffb17b421e.mp4",
+      "sha256": "f5dff44447764153bbb9d98db4837e205dd6b4f8f7f797678980bad3557b8a64",
+      "source_page": "https://www.nps.gov/media/video/view.htm?id=58216178-F013-4CD1-B876-12195E6079A5",
+      "download_host": "www.nps.gov",
+      "tasl": {
+        "title": "Bison herd",
+        "author": "NPS/Neal Herbert",
+        "source": "https://www.nps.gov/media/video/view.htm?id=58216178-F013-4CD1-B876-12195E6079A5",
+        "license": "PD-unless-noted (https://www.nps.gov/aboutus/disclaimer.htm)"
+      },
+      "provenance": "unknown",
+      "license": {
+        "license_id": "PD-unless-noted",
+        "attribution_required": "yes",
+        "derivatives": "yes",
+        "commercial": "yes",
+        "ai_use": "unknown",
+        "third_party_rights_flag": false,
+        "purpose_restriction": null,
+        "terms_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+        "terms_snapshot_sha256": "33116c675b05818d68e62e3de66bff099e783a1d4e1b4ebd04c131c4800d35fa"
+      },
+      "gate": {
+        "verdict": "PASS",
+        "rules": [],
+        "artifact_sha256": "f5dff44447764153bbb9d98db4837e205dd6b4f8f7f797678980bad3557b8a64"
+      },
+      "media": {
+        "duration_s": 4.004,
+        "width": 1280,
+        "height": 720,
+        "codec": "h264",
+        "fps": 29.97
+      },
+      "segment": {
+        "in_s": 2.0,
+        "out_s": 6.0,
+        "parent_sha256": "d429dcbf9f90af2cdc18f2fcfaba7bcc5f12c96f73943ee358706f10b60946dc"
+      },
+      "downloaded_at": "2026-11-24T09:20:56Z",
+      "modifications": [
+        "re-encoded to H.264",
+        "audio removed",
+        "crop: 16:9 to 9:16",
+        "speed: 50%"
+      ]
+    }
+  ]
+}

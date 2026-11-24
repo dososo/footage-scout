@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "footage-scout",
+  "version": "0.5.0",
+  "description": "Find, check, download and credit licence-cleared video footage without accounts or API keys.",
+  "author": { "name": "爆裂队长NEXT（BLCaptain）" },
+  "repository": "https://github.com/dososo/footage-scout",
+  "license": "Apache-2.0",
+  "keywords": ["footage", "b-roll", "video", "licence"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "footage-scout 寻镜",
+        "shortDescription": "Keyless, licence-gated video footage search",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "defaultPrompt": ["给这段文案找可用的视频素材"]
+      }
+    }
+  }
+}
