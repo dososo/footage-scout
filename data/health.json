@@ -1,1 +1,134 @@
-{"schema_version": "1.0.0", "generated_at": "2026-11-24", "sources": {}}
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-24",
+  "sources": {
+    "dareful": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "a5e2f9be4a9f89e1caaa8396c0b69819b58c09b339aa88259bf69194365c1257"
+    },
+    "esahubble": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "128f8789d8c0aad5535128f39de339fd3a5aef0ffefbfe8ed5fe9c492a37d32f"
+    },
+    "esawebb": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "943fabd94b18bbc7af5d39b8c1956a4c0218118fb6f3c4b71f51d3978f2f49ec"
+    },
+    "eso": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "3f73d173ae4cf734f2f48a0609510eff05b68ba227661fbd22c5ef94cd915bed"
+    },
+    "ia": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "bcb3221e1cfad897e486c5fcc110ecd8877e6fa269c5d0ac8e3e3fede982fe54"
+    },
+    "ia_nasa": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "bcb3221e1cfad897e486c5fcc110ecd8877e6fa269c5d0ac8e3e3fede982fe54"
+    },
+    "isorepublic": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "1a49f1d6bdca43b3ce53179896cc283e01da2a39089c4602bef977bc52b50690"
+    },
+    "loc": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": null
+    },
+    "nasa_eol": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "f5d203446bf572af082160af28a676c58619811f5b2352810e95d6ae963eda39"
+    },
+    "nasa_images": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": null
+    },
+    "nasa_svs": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "694a490c1ae450189a59eff82bc560adea6932a2e9053e2ef73d637758795fd3"
+    },
+    "netflix_open": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "79b046168b5d937ba7bceee11ab4b7d701d1a6a924b89bb101909b4939318157"
+    },
+    "noirlab": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "389b22bb4913d8808277d41a0fa2adab1ef2cfed1a4f1d7da9553aa8a04bd053"
+    },
+    "nps": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "d3e3ec34a3357fc5e969da816908faa447f86ca1ccf75178e6e70a506a78b37a"
+    },
+    "openbeelden": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "5bf40fbf4e3e52a0d49b2c38da8f42e957faaa8d7cf5d7d9192e7c642c2891b9"
+    },
+    "usgs": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "f8f71565a6701f4a9b00351103484602044b88daab227604afd038995fdc6985"
+    }
+  }
+}
