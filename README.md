@@ -169,7 +169,7 @@ uv run --extra mcp pytest -q
 | 测试 | 见上；CI 跑三系统 × 三个 Python | 九格全过 |
 | 变异 | `uv run --all-extras python scripts/mutate.py` | 247/247 |
 | 真实检索 | `uv run python evals/run.py --live -o out` | 20 条选题，许可泄漏 0；核心题材 18/18 有可下载素材，其中只有 6/18 每个镜头都有 PASS |
-| 来源冒烟 | `uv run python scripts/smoke.py -o out` | 17 个源里 16 个正常、Commons 因缺联系地址跳过 |
+| 来源冒烟 | `uv run python scripts/smoke.py -o out` | 17 个源全部正常 |
 
 自动测试只能证明程序按规则走，**不能证明素材选得准**；画面是否对题还没有做过人工盲评。
 
