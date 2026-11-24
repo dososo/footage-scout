@@ -64,7 +64,7 @@
       "failures": 0,
       "last_ok": "2026-11-24",
       "error": null,
-      "terms_sha256": null
+      "terms_sha256": "547278968ea826045fe9ff926f1898b62ff73b22575dcc0ae47bf7d2af6a0cfb"
     },
     "nasa_eol": {
       "week": "2026-W48",
@@ -129,6 +129,14 @@
       "last_ok": "2026-11-24",
       "error": null,
       "terms_sha256": "f8f71565a6701f4a9b00351103484602044b88daab227604afd038995fdc6985"
+    },
+    "commons": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "7753a935cfe858b485521a78a594b6a84f46edca50dfe6905162b871834b0987"
     }
   }
 }
