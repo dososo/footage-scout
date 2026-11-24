@@ -2,7 +2,7 @@
 import pathlib,shutil,subprocess,tempfile,sys,os
 B=pathlib.Path(__file__).resolve().parents[1]; W=pathlib.Path(tempfile.mkdtemp())
 for d in ('src','tests','data','schemas','skills','evals','.claude-plugin','.agents','.github','scripts','docs','examples'): shutil.copytree(B/d,W/d,ignore=shutil.ignore_patterns('__pycache__'))
-[shutil.copy(B/f,W) for f in ('pyproject.toml','README.md','README.en.md','NOTICE','plugin.json','mcp.json','.mcp.json','LICENSE')]
+[shutil.copy(B/f,W) for f in ('pyproject.toml','README.md','README.en.md','NOTICE','LICENSE-docs','CHANGELOG.md','plugin.json','mcp.json','.mcp.json','LICENSE')]
 M=[('gate.py','hit("BLOCK", "R1")','pass'),('gate.py','hit("BLOCK", "R2")','pass'),('gate.py','hit("BLOCK", "R3")','pass'),('gate.py','hit("BLOCK", "R4")','pass'),
 ('gate.py','age > 180','age > 181'),('gate.py',' or age < 0',''),('gate.py','hit("WARN", "R6")','pass'),('gate.py','hit("WARN", "R7")','pass'),('gate.py','hit("HOLD", "R9")','pass'),
 ('gate.py','source["gate_default"] == "hold"','False'),('gate.py','source["gate_default"] == "block"','False'),('gate.py','source["verify_status"] == "stale"','False'),
@@ -59,7 +59,8 @@ M=[m for m in M if m[1]!=m[2]]; S=[]
 env=dict(os.environ,PYTHONPATH=str(W/'src'),PYTHONDONTWRITEBYTECODE='1')
 def t(): return subprocess.run([sys.executable,'-m','pytest','-q','-x','-p','no:cacheprovider'],cwd=W,env=env,capture_output=True,text=True,timeout=240).returncode
 miss=[(f,a) for f,a,b in M if a not in (W/'src/footage_scout'/f).read_text()]; assert not miss, miss
-print('baseline rc',t())
+rc=t(); print('baseline rc',rc,flush=True)
+if rc: raise SystemExit('baseline is red: results would be meaningless')
 for f,a,b in M:
     p=W/'src/footage_scout'/f; o=p.read_text(); assert a in o,(f,a)
     p.write_text(o.replace(a,b,1))
