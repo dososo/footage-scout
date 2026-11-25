@@ -64,7 +64,7 @@
       "failures": 0,
       "last_ok": "2026-11-24",
       "error": null,
-      "terms_sha256": null
+      "terms_sha256": "547278968ea826045fe9ff926f1898b62ff73b22575dcc0ae47bf7d2af6a0cfb"
     },
     "nasa_eol": {
       "week": "2026-W48",
@@ -72,7 +72,7 @@
       "failures": 0,
       "last_ok": "2026-11-24",
       "error": null,
-      "terms_sha256": "f5d203446bf572af082160af28a676c58619811f5b2352810e95d6ae963eda39"
+      "terms_sha256": "f99a4b0d9454eb4c2793107d1064db7c2fd2d525560d87b72c5680ed37b87717"
     },
     "nasa_images": {
       "week": "2026-W48",
@@ -129,6 +129,14 @@
       "last_ok": "2026-11-24",
       "error": null,
       "terms_sha256": "f8f71565a6701f4a9b00351103484602044b88daab227604afd038995fdc6985"
+    },
+    "commons": {
+      "week": "2026-W48",
+      "before": 0,
+      "failures": 0,
+      "last_ok": "2026-11-24",
+      "error": null,
+      "terms_sha256": "7753a935cfe858b485521a78a594b6a84f46edca50dfe6905162b871834b0987"
     }
   }
 }
